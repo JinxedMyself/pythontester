@@ -5,3 +5,7 @@ def application(environ, start_response):
 
     html = 'Hello World'
     return [bytes(html, 'utf-8')]
+
+if __name__ == '__main__':
+    page = application({}, print)
+    print(page[0].decode())
